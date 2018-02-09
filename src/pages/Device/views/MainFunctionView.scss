@@ -1,0 +1,18 @@
+main-func-view{
+  .main-func{
+  }
+  .shadow-container{
+    margin: 10px;
+    height: calc(100% - 20px);
+    box-shadow: 0px 0px 2px #888888;
+    border-radius: 4px;
+    padding: 0px;
+  }
+  .shadow-container > div{
+
+    height: 50%;
+  }
+  .shadow-container > div > div{
+
+  }
+}

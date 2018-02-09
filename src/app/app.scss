@@ -14,3 +14,10 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-navbar>div{
+  border: 0px solid #1E8CF0 !important;
+}
+.bar-button-default-ios{
+  padding: 0px 10px !important;
+}

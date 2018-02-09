@@ -1,0 +1,38 @@
+self-config-page{
+  ion-content{
+    background-color: color($colors,bkColor) !important;
+  }
+  .user_info_view{
+    text-align: center;
+    display: flex;
+    display: inline-flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+  }
+  .user_info_view .user_icon{
+    width:91px;
+    height: 91px;
+    background-color: orange;
+    border-radius: 45.5px;
+  }
+  .user_info_view .user_icon img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+  }
+  .user_info_view .user_name{
+    text-align: center;
+    margin-top: 5px;
+  }
+  .setting_list{
+    margin-top: 10px !important;
+  }
+  .item-ios ion-avatar ion-img, .item-ios ion-avatar img{
+    border-radius: 0px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+}

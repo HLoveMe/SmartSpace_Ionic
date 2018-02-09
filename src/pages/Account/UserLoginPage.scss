@@ -1,0 +1,48 @@
+
+login-page{
+  .top-title{
+    text-align: center;
+    color: #E72F6D;
+    font-size: 3.6rem;
+    margin-top: 45px;
+    line-height: 50px;
+    height: 50px;
+  }
+  .top-desc{
+    text-align: center;
+    color: #999999;
+    font-size: 1.4rem;
+  }
+  .center-func{
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 90px;
+    //background-color: #333333;
+    margin-top: 50px;
+  }
+  .finish{
+    margin-left: 24px;
+    margin-right: 24px;
+    display: block;
+    margin-top: 40px;
+  }
+  .assist{
+    margin-top: 5px;
+    margin-left: 24px;
+    margin-right: 24px;
+    height: 30px;
+  }
+  .assist div{
+    height: 30px;
+    line-height: 30px;
+  }
+  .assist div:nth-of-type(1){
+    float: left;
+  }
+  .assist div:nth-of-type(2){
+    float: right;
+  }
+  .assist div:nth-of-type(2) span{
+    color: color($colors,navbar)
+  }
+}

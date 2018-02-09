@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="main-func" #Container>
+  <div class="shadow-container">
+      <div ion-row *ngFor="let items of datas;let index = index">
+          <div ion-col *ngFor="let one of items;let _index = index">
+            <main-func-part [title]="one.title" [icon]="one.icon" [type]="index * 3 + _index"></main-func-part>
+          </div>
+      </div>
+  </div>
+</div>
+

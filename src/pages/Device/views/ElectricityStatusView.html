@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="main-status" #Container>
+  <div class="title">
+      {{info?.title}}
+  </div>
+  <div class="money yesterday_money">{{"昨日电费 ￥" + info?.yesterday * info?.price}}</div>
+  <div class="money today_money">{{"今日电费 ￥" + info?.today * info?.price}}</div>
+  <div class="ele">
+    <div class="ele_chart" id="echarts_post">
+
+    </div>
+    <div class="ele_status">
+      <div ion-row class="row">
+        <div ion-col class="col">
+          <div>
+            <span>电压</span>
+          </div>
+          <div>
+            {{info?.pressure + "V"}}
+          </div>
+        </div>
+        <div ion-col class="col">
+          <div>
+            <span>电流</span>
+          </div>
+          <div>
+            {{info?.electric + "A"}}
+          </div>
+        </div>
+      </div>
+      <div ion-row class="row">
+        <div ion-col class="col">
+          <div>
+            <span>功率</span>
+          </div>
+          <div>
+            {{info?.electric * info?.pressure + "W"}}
+          </div>
+        </div>
+        <div ion-col class="col">
+          <div>
+            <span>温度</span>
+          </div>
+          <div>
+            {{info?.temperature + "℃"}}
+          </div>
+        </div>
+      </div>
+      <div ion-row class="row">
+        <div ion-col class="col">
+          <div>
+            <span>漏电</span>
+          </div>
+          <div>
+            {{info?.lostElectric + "A"}}
+          </div>
+        </div>
+        <div ion-col class="col">
+          <div>
+            <span>电费</span>
+          </div>
+          <div>
+            {{"￥" + info?.today * info?.price }}
+          </div>
+        </div>
+      </div>
+      <div class="update_time">
+        数据更新时间是2017.2.1 19:56
+      </div>
+    </div>
+  </div>
+</div>

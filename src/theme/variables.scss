@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  navbar:     #1E8CF0,
+  bkColor:    #f5f5f5,
 );
 
 
@@ -46,7 +48,7 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$toolbar-ios-title-font-size:1.8rem;
 
 
 // App Material Design Variables

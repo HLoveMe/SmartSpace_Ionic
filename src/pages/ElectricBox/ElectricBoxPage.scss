@@ -1,0 +1,24 @@
+ele-box{
+  ion-content{
+    background-color: color($colors,bkColor) !important;
+  }
+  ion-list{
+    padding-top: 9px;
+  }
+  ion-list .line{
+    height:5px;
+  }
+  ion-list ion-avatar img{
+    border-radius: 0px !important;
+  }
+  ion-list a img{
+    height: 18px;
+    width: 18px;
+  }
+  ion-item-group a:first-of-type[class*=activated]{
+    background-color: white !important;
+  }
+  ion-item-group .item-ios.activated{
+    background-color: white !important;
+  }
+}

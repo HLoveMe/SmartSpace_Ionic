@@ -1,8 +1,14 @@
 {
   "name": "SmartSpace",
-  "app_id": "",
+  "app_id": "com.space.SmartSpace2",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies":[
+    {
+      "path":"/apiv1",
+      "proxyUrl": "http://192.168.40.243/apiv1"
+    }
+  ]
 }

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>我的</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content base-content-no-scroll="">
+  <div class="user_info_view" #USerInfoView>
+      <div class="user_icon" (click)="userInfoClick()">
+        <img [src]="user?.headimgurl" alt="">
+      </div>
+      <div class="user_name">
+        {{user?.name}}
+      </div>
+  </div>
+  <ion-list class="setting_list">
+    <a ion-item *ngFor="let item of items;let index = index" (click)="itemClick(index)">
+      <ion-avatar item-start>
+        <img [src]="'./assets/images/User/my_icon_'+index+'@2x.png'" alt="">
+      </ion-avatar>
+      {{item}}
+    </a>
+  </ion-list>
+</ion-content>

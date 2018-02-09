@@ -1,0 +1,11 @@
+user-pwd-revame{
+  .container{
+      background-color: color($colors,bkColor);
+  }
+  .container .content_con{
+    background-color: white;
+    margin-top: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

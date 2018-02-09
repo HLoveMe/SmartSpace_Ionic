@@ -1,0 +1,14 @@
+app-config{
+  .container{
+    background-color: color($colors,bkColor);
+  }
+  ion-list{
+    margin-top: 9px !important;
+  }
+  ion-list a:last-of-type{
+    border: 0px !important;
+  }
+  ion-list a:first-of-type{
+    border: 0px !important;
+  }
+}

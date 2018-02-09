@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>
+      设置
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content base-content-no-scroll="" class="container">
+  <ion-list>
+    <a ion-item *ngFor="let item of items;let index = index" (click)="itemClick(index)">
+      {{item}}
+      <div item-end *ngIf="index >= 2">{{version}}</div>
+    </a>
+  </ion-list>
+</ion-content>

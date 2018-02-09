@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>注册用户</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content base-content-no-scroll>
+  <div class="content-code-container">
+    <content-view [type]="'0'" ></content-view>
+    <div></div>
+    <content-code (getCode)="getCode($event)"></content-code>
+  </div>
+  <a href="#" ion-button="" class="next" (click)="next()" color="navbar">下一步</a>
+</ion-content>

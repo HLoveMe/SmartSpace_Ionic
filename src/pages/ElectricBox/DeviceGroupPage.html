@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>
+      设备组
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content base-content-no-scroll="">
+  <ion-list>
+    <div class="tool" (click)="createGroup()">
+      <div class="icon">
+        <img src="./assets/images/Distribution/box_add@2x.png"/>
+      </div>
+      <div class="title">
+        <span>新建分组</span>
+      </div>
+    </div>
+
+    <ion-item-sliding *ngFor="let item of group;let index = index">
+      <a ion-item detail-none (click)="editGroup(item)">
+        {{item.group_name}}
+        <span>({{item.count}})</span>
+      </a>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeGroup(index)">
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="navbar" hideBackButton="true">
+    <ion-buttons>
+      <a ion-button="" navPop>
+        取消
+      </a>
+    </ion-buttons>
+    <ion-title>
+      增加设备
+    </ion-title>
+    <ion-buttons end="">
+      <a ion-button="" (click)="Sure()">
+        确定
+      </a>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content base-content-no-scroll="">
+  <ion-list>
+    <a ion-item detail-none>
+      <ion-avatar item-start>
+        <img [src]="'./assets/images/Distribution/dis_box@2x.png'" alt="">
+      </ion-avatar>
+      配电箱组<span >({{equs?.length}})</span>
+    </a>
+    <a ion-item *ngFor="let one of equs;let index = index" detail-none >
+      <ion-label>{{one.name}}</ion-label>
+      <ion-checkbox (ionChange)="select(index)"></ion-checkbox>
+    </a>
+  </ion-list>
+</ion-content>

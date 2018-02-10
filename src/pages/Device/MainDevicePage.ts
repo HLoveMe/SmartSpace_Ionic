@@ -8,6 +8,8 @@ import {ElectricityStatusView} from "./views/ElectricityStatusView";
 import {MainFunctionView} from "./views/MainFunctionView";
 import {PXhandle} from "../HTools/PXhandle";
 import {MainElectrtStatusInfo} from "./models/MainElectrtStatusInfo";
+import {DeviceBoxManager} from "../HTools/DeviceBoxManager";
+import {LoadingController} from "ionic-angular/index";
 
 
 @Component({
@@ -21,6 +23,8 @@ export  class  MainDevicePage{
   type:number = 0
   constructor(
     private pxhandle:PXhandle,
+    private device:DeviceBoxManager,
+    private loadC:LoadingController
   ){
   }
   ionViewDidLoad(){
@@ -56,6 +60,19 @@ export  class  MainDevicePage{
     info.lostElectric = 1.8;
     info.price = 0.75;
     this.statusView.updateData(info)
+  }
+  show(){
+    this.loadC.create({
+      enableBackdropDismiss:true,
+      content:`
+<div>
+  <div>
+    <ion-spinner name="bubbles"></ion-spinner>   
+  </div>
+  <div>sasas</div>
+</div>
+`
+    }).present()
   }
 }
 

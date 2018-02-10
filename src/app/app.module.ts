@@ -29,6 +29,9 @@ import {AppAboutViewPage} from "../pages/User/configs/AppAboutViewPage";
 import {USerInfoShowPage} from "../pages/User/users/USerInfoShowPage";
 import {DeviceBoxManager} from "../pages/HTools/DeviceBoxManager";
 import {ElectricBoxPage} from "../pages/ElectricBox/ElectricBoxPage";
+import {DeviceGroupPage} from "../pages/ElectricBox/DeviceGroupPage";
+import {CreateDeviceGroupPage} from "../pages/ElectricBox/CreateDeviceGroupPage";
+import {SelectDevicePage} from "../pages/ElectricBox/SelectDevicePage";
 
 
 @NgModule({
@@ -37,7 +40,7 @@ import {ElectricBoxPage} from "../pages/ElectricBox/ElectricBoxPage";
     UserLoginPage,ContentFieldView,ContentCodeView,UserRegisterCodePage,UserForgetPasswordPage,UserRegisterPwdPage,
     MainDevicePage,ElectricityStatusView,MainFunctionView,MainFunctionPartView,
 
-    ElectricBoxPage,
+    ElectricBoxPage,DeviceGroupPage,CreateDeviceGroupPage,SelectDevicePage,
 
     SelfUserViewPage,AppSettingViewPage,UserRevampPwdPage,AppAboutViewPage,
     USerInfoShowPage,
@@ -61,7 +64,7 @@ import {ElectricBoxPage} from "../pages/ElectricBox/ElectricBoxPage";
     UserLoginPage,ContentFieldView,ContentCodeView,UserRegisterCodePage,UserForgetPasswordPage,UserRegisterPwdPage,
     MainDevicePage,ElectricityStatusView,MainFunctionView,
 
-    ElectricBoxPage,
+    ElectricBoxPage,DeviceGroupPage,CreateDeviceGroupPage,SelectDevicePage,
 
     SelfUserViewPage,AppSettingViewPage,UserRevampPwdPage,AppAboutViewPage,
     USerInfoShowPage,

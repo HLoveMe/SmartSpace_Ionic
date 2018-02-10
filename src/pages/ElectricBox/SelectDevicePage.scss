@@ -1,21 +1,20 @@
-ele-box{
+add-device{
   ion-content{
     background-color: color($colors,bkColor) !important;
   }
   ion-list{
     padding-top: 9px;
   }
-  ion-list .line{
-    height:5px;
-  }
   ion-list ion-avatar img{
     border-radius: 0px !important;
   }
-  ion-list a img{
-    height: 18px;
-    width: 18px;
-  }
-  ion-item-group:nth-of-type(2) a:first-of-type[class*=activated]{
+  ion-list a:first-of-type[class*=activated]{
     background-color: white !important;
+  }
+  ion-list > .item-block:first-child{
+    border-top: 0 !important;
+  }
+  ion-list >.item-block:last-child{
+    border-bottom: 0 !important;
   }
 }

@@ -1,0 +1,38 @@
+device-group-list{
+  ion-content{
+    background-color: color($colors,bkColor) !important;
+  }
+  ion-list{
+    padding-top: 9px;
+  }
+  ion-list > .item-block:first-child{
+    border-top: 0 !important;
+  }
+  ion-list >.item-block:last-child{
+    border-bottom: 0 !important;
+  }
+  ion-list a span{
+    color:#999999;
+  }
+  ion-list .tool{
+    background-color: white;
+    height: 44px;
+    border-bottom: 0.5px solid #a1a1a1;
+    padding-left: 12px;
+  }
+  ion-list .tool div{
+    float: left;
+  }
+  ion-list .tool .title{
+    margin-left: 10px;
+    color:color($colors,navbar);
+    height:44px;
+    line-height: 44px;
+  }
+  ion-list .tool img{
+    width: 18px;
+    height: 18px;
+    margin-top: 11px;
+    //margin-left: 10px;
+  }
+}

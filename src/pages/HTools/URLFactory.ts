@@ -22,7 +22,6 @@ export class AuthorizationInterceptor implements HttpInterceptor{
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
-    console.log(this.user.token)
     let reqq = req.clone({
       headers:req.headers.set("Authorization",this.user.token)
         .set("Access-Control-Allow-Origin","*")

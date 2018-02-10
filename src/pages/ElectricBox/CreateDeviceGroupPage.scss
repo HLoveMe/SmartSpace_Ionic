@@ -1,0 +1,41 @@
+
+create-group{
+  ion-content{
+    background-color: color($colors,bkColor) !important;
+  }
+  ion-list{
+    padding-top: 9px;
+  }
+  ion-list >div:nth-of-type(1){
+    color: #666666;
+    padding-left: 10px;
+  }
+  ion-list >div:nth-of-type(2){
+    color: #666666;
+    padding-left: 10px;
+    margin-top: 10px;
+    height: 20px;
+    line-height: 20px;
+  }
+  ion-list .tool{
+    background-color: white;
+    height: 35px;
+    padding-left: 12px;
+  }
+  ion-list .tool div{
+    float: left;
+  }
+  ion-list .tool .title{
+    margin-left: 0px;
+    color:color($colors,navbar);
+    line-height: 35px;
+    height: 3px;
+    margin-left: 10px;
+  }
+  ion-list .tool img{
+    width: 18px;
+    height: 18px;
+    margin-top: 9px;
+    //margin-left: 10px;
+  }
+}

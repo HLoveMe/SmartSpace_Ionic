@@ -8,11 +8,11 @@
 <ion-content base-content-no-scroll="">
   <ion-list>
     <ion-item-group>
-      <a ion-item>
+      <a ion-item (click)="deviceGroupClick()">
         <ion-avatar item-start>
           <img [src]="'./assets/images/Distribution/dis_group@2x.png'" alt="">
         </ion-avatar>
-        配电箱组
+        配电箱组<span *ngIf="box != null">({{box?.group_count}})</span>
       </a>
     </ion-item-group>
     <div class="line"></div>
@@ -21,9 +21,9 @@
         <ion-avatar item-start>
           <img [src]="'./assets/images/Distribution/dis_box@2x.png'" alt="">
         </ion-avatar>
-        配电箱
+        配电箱<span *ngIf="box != null">({{box?.equipments.length}})</span>
       </a>
-      <a ion-item detail-none *ngFor="let equ of box?.equipments">
+      <a ion-item detail-none *ngFor="let equ of box?.equipments" (click)="deviceClick(equ)">
         <ion-avatar item-start>
         </ion-avatar>
         {{equ?.name}}

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 import {MainDevicePage} from "../Device/MainDevicePage"
 import {SelfUserViewPage} from "../User/SelfUserViewPage";
 import {ElectricBoxPage} from "../ElectricBox/ElectricBoxPage";
+import {ElectricityViewPage} from "../Electricity/ElectricityViewPage";
 
 
 @Component({
@@ -14,7 +15,9 @@ import {ElectricBoxPage} from "../ElectricBox/ElectricBoxPage";
 export  class SmartTabs{
   home = MainDevicePage
   box = ElectricBoxPage
-  ele = MainDevicePage
+  ele = ElectricityViewPage
   user = SelfUserViewPage
-  constructor(){}
+  constructor(){
+
+  }
 }

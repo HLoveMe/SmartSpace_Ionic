@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.zzh.mqtt" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>MQTTClientBox</name>
+  <js-module name="MQTTClientBox" src="www/MQTTClientBox.js">
+    <clobbers target="navigator.MQTTClientBox" />
+  </js-module>
+  <platform name="ios">
+  	<header-file src="src/ios/MQTTClientBox.h"></header-file>
+  	<source-file src="src/ios/MQTTClientBox.m"></source-file>
+	
+	<header-file src="src/ios/SocketRocket/SRWebSocket.h"></header-file>
+	<source-file src="src/ios/SocketRocket/SRWebSocket.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/ForegroundReconnection.h"></header-file>
+	<source-file src="src/ios/MQTTClient/ForegroundReconnection.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/GCDTimer.h"></header-file>
+	<source-file src="src/ios/MQTTClient/GCDTimer.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTCFSocketDecoder.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTCFSocketDecoder.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTCFSocketEncoder.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTCFSocketEncoder.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTCFSocketTransport.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTCFSocketTransport.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTCoreDataPersistence.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTCoreDataPersistence.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTDecoder.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTDecoder.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTInMemoryPersistence.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTInMemoryPersistence.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTLog.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTLog.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTMessage.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTMessage.m"></source-file>
+	
+	<header-file src="src/ios/MQTTClient/MQTTPersistence.h"></header-file>
+	
+	<header-file src="src/ios/MQTTClient/MQTTProperties.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTProperties.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTSession.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSession.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTSessionLegacy.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSessionLegacy.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTSessionManager.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSessionManager.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTSessionSynchron.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSessionSynchron.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicy.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicy.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicyDecoder.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicyDecoder.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicyEncoder.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicyEncoder.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicyTransport.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTSSLSecurityPolicyTransport.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTStrict.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTStrict.m"></source-file>
+	<header-file src="src/ios/MQTTClient/MQTTTransport.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTTransport.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/ReconnectTimer.h"></header-file>
+	<source-file src="src/ios/MQTTClient/ReconnectTimer.m"></source-file>
+
+	<header-file src="src/ios/MQTTClient/MQTTWebsocketTransport/MQTTWebsocketTransport.h"></header-file>
+	<source-file src="src/ios/MQTTClient/MQTTWebsocketTransport/MQTTWebsocketTransport.m"></source-file>
+	
+    <config-file parent="/*" target="config.xml">
+      <feature name="MQTTClientBox">
+        <param name="ios-package" value="MQTTClientBox" />
+      </feature>
+    </config-file>
+
+    <framework src="libicucore.tbd" />
+  </platform>
+</plugin>

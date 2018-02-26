@@ -22,7 +22,11 @@ export class DeviceGroupPage{
   ){}
   ionViewDidEnter(){
     this.network.Get("group/index").subscribe((res:ResponseResult)=>{
-      this.group = res.result.group as DeviceGroup[];
+      if(res.ok){
+        this.group = res.result.group.map(function (value) {
+          return value as DeviceGroup;
+        })
+      }
     })
   }
   createGroup(){

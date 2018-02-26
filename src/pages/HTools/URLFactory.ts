@@ -38,7 +38,7 @@ export class AuthorizationInterceptor implements HttpInterceptor{
 
 export class ResponseResult{
   ok:boolean;
-  result?:{[key:string]:any} | [{[key:string]:any}];
+  result?:any;
   error?:any;
 }
 
@@ -54,7 +54,7 @@ export  class NetWork{
   }
   URLString(url:string):string{
     if(this.baseURL.indexOf("file://")  >= 0){
-      return "http://192.168.40.243/apiv1/" + url
+      return "http://smart.vr68.com/apiv1/" + url
     }else if(this.baseURL.indexOf("localhost") >= 0 ){
       return "/apiv1/" + url
     }else{
@@ -121,7 +121,7 @@ export  class NetWork{
       })
     });
   }
-  Get(url:string,header?:Headers,parms?:{[key:string]: any}):Observable<ResponseResult>{
+  Get(url:string,header?:any,parms?:any):Observable<ResponseResult>{
     return this.NetWork(url,"GET",parms,header);
   }
 
@@ -134,7 +134,7 @@ export  class NetWork{
    *  }
    *  这里 已经处理error  ok 表示请求是否成功
    * */
-  POST(url:string,body?:{[name:string]:any}):Observable<ResponseResult>{
+  POST(url:string,body?:any):Observable<ResponseResult>{
     return this.NetWork(url,"POST",body);
   }
 }

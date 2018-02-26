@@ -31,10 +31,10 @@ export class CreateDeviceGroupPage{
     if(this.group != null){
       this.name = this.group.group_name;
       this.title = "设置设备分组";
-      this.network.Get("group/group-info",{"id":this.group.id}).subscribe((res:ResponseResult)=>{
+      this.network.Get("group/group-info",{id:this.group.id}).subscribe((res:ResponseResult)=>{
         console.log(res);
         if(res.ok){
-          this.groupDetail = res.result;
+          this.groupDetail = res.result as DeviceGroupDetail;
           this.operation = this.groupDetail.equipment_in;
         }
       })

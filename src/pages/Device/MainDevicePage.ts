@@ -2,7 +2,6 @@
  * Created by zhuzihao on 2018/2/5.
  */
 
-
 import {Component, ViewChild} from '@angular/core';
 import {ElectricityStatusView} from "./views/ElectricityStatusView";
 import {MainFunctionView} from "./views/MainFunctionView";
@@ -10,6 +9,8 @@ import {PXhandle} from "../HTools/PXhandle";
 import {MainElectrtStatusInfo} from "./models/MainElectrtStatusInfo";
 import {DeviceBoxManager} from "../HTools/DeviceBoxManager";
 import {LoadingController} from "ionic-angular/index";
+import {MQTTManager} from "../HTools/MQTTManager";
+import {UserInfoManager, USerInfo} from "../Account/UserInfoManager";
 
 
 @Component({
@@ -20,11 +21,12 @@ import {LoadingController} from "ionic-angular/index";
 export  class  MainDevicePage{
   @ViewChild(ElectricityStatusView) statusView:ElectricityStatusView;
   @ViewChild(MainFunctionView) funView:MainFunctionView;
-  type:number = 0
+  type:number = 0;
   constructor(
     private pxhandle:PXhandle,
     private device:DeviceBoxManager,
-    private loadC:LoadingController
+    private loadC:LoadingController,
+    private userM:UserInfoManager
   ){
   }
   ionViewDidLoad(){
@@ -33,7 +35,7 @@ export  class  MainDevicePage{
     this.funView.setHeight(this.pxhandle.PXHeight(195));
     //接受事件
     this.funView.selectSubject.subscribe((type)=>{
-      this.type = type
+      this.type = type;
       switch (type){
         case 0:
           break
@@ -59,20 +61,23 @@ export  class  MainDevicePage{
     info.temperature = 24;
     info.lostElectric = 1.8;
     info.price = 0.75;
-    this.statusView.updateData(info)
+    this.statusView.updateData(info);
+
+
+
+    //接受MQTT消息
+    console.log("接受MQTT消息");
+    this.userM.userSubject.subscribe((user:USerInfo)=>{
+      let navigator = navigator;
+      if(user != null && navigator && navigator.MQTTClientBox){
+        MQTTManager.listenMQTT(user.user_id,user.default_equipment).subscribe((res)=>{
+          this.handleMqttMessage(res);
+        })
+      }
+    });
   }
-  show(){
-    this.loadC.create({
-      enableBackdropDismiss:true,
-      content:`
-<div>
-  <div>
-    <ion-spinner name="bubbles"></ion-spinner>   
-  </div>
-  <div>sasas</div>
-</div>
-`
-    }).present()
+  handleMqttMessage(res){
+    console.log("接收到MQtt消息",res);
   }
 }
 

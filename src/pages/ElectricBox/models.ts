@@ -10,6 +10,7 @@ export  class DeviceGroup{
   id:number = 0;
   count:number = 0;
   group_name:string = "";
+  constructor(){}
 }
 //一个设备组 详细信息
 export class DeviceGroupDetail{
@@ -18,4 +19,5 @@ export class DeviceGroupDetail{
   status:number = 0;
   equipment_in:Equipment[]=[];
   equipment_out:Equipment[]=[];
+  constructor(){}
 }

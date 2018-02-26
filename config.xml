@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.space.smartspace" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>SmartSpace</name>
-    <description>An awesome Ionic/Cordova app.</description>
+    <description>爱上无名氏</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
@@ -78,6 +78,7 @@
     </platform>
     <allow-navigation href="http://192.168.1.20:8100" />
     <allow-navigation href="http://localhost:8080" />
+    <allow-navigation href="http://192.168.50.101:8100" />
     <engine name="ios" spec="~4.5.4" />
     <plugin name="cordova-sqlite-storage" spec="^2.2.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
@@ -85,6 +86,6 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <allow-navigation href="http://192.168.50.101:8100" />
     <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
+    <plugin name="com.zzh.mqtt" spec="/Users/zhuzihao/Desktop/SmartSpace_Ionic/SmartSpace/MQTTClientBox" />
 </widget>

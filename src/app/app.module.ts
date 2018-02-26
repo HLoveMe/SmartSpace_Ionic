@@ -32,6 +32,8 @@ import {ElectricBoxPage} from "../pages/ElectricBox/ElectricBoxPage";
 import {DeviceGroupPage} from "../pages/ElectricBox/DeviceGroupPage";
 import {CreateDeviceGroupPage} from "../pages/ElectricBox/CreateDeviceGroupPage";
 import {SelectDevicePage} from "../pages/ElectricBox/SelectDevicePage";
+import {ElectricityViewPage} from "../pages/Electricity/ElectricityViewPage";
+import {MQTTManager} from "../pages/HTools/MQTTManager";
 
 
 @NgModule({
@@ -43,7 +45,7 @@ import {SelectDevicePage} from "../pages/ElectricBox/SelectDevicePage";
     ElectricBoxPage,DeviceGroupPage,CreateDeviceGroupPage,SelectDevicePage,
 
     SelfUserViewPage,AppSettingViewPage,UserRevampPwdPage,AppAboutViewPage,
-    USerInfoShowPage,
+    USerInfoShowPage,ElectricityViewPage
 
   ],
   imports: [
@@ -67,7 +69,7 @@ import {SelectDevicePage} from "../pages/ElectricBox/SelectDevicePage";
     ElectricBoxPage,DeviceGroupPage,CreateDeviceGroupPage,SelectDevicePage,
 
     SelfUserViewPage,AppSettingViewPage,UserRevampPwdPage,AppAboutViewPage,
-    USerInfoShowPage,
+    USerInfoShowPage,ElectricityViewPage,
 
 
   ],

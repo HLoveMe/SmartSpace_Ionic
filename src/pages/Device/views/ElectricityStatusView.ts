@@ -19,7 +19,6 @@ export  class  ElectricityStatusView{
   }
   ngOnInit(){
     var myChart = echarts.init(document.getElementById('echarts_post'));
-    console.log(myChart)
     var option = {
       grid: [{
         left: 20,

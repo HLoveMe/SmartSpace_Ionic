@@ -1,0 +1,17 @@
+{
+  "name": "MQTTClientBox",
+  "version": "1.0.0",
+  "description": "MQTT",
+  "cordova": {
+    "id": "com.zzh.mqtt",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "爱上无名氏",
+  "license": "ISC"
+}

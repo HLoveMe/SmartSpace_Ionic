@@ -27,9 +27,9 @@ export class UserRegisterCodePage{
   }
   URLString(url:string):string{
     if(this.baseURL.indexOf("file://")  >= 0){
-      return "http://192.168.40.243/apiv1/" + url
+      return "http://smart.vr68.com/apiv1/" + url
     }else if(this.baseURL.indexOf("localhost") >= 0 ){
-      return "http://192.168.40.243/apiv1/" + url
+      return "http://smart.vr68.com/apiv1/" + url
     }else{
       return "/apiv1/" + url
     }

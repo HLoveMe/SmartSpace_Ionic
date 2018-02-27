@@ -31,6 +31,7 @@ export class UserLoginPage{
         showBackdrop:false,
         content:"登入中...",
       });
+      load.present();
       this.userM.UserLogin(mobile,pwd).subscribe((ok)=>{
         load.dismiss();
         this.loadC.create({

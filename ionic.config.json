@@ -8,7 +8,7 @@
   "proxies":[
     {
       "path":"/apiv1",
-      "proxyUrl": "http://192.168.40.243/apiv1"
+      "proxyUrl": "http://smart.vr68.com/apiv1"
     }
   ]
 }

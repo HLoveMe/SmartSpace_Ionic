@@ -68,8 +68,8 @@ export  class  MainDevicePage{
     //接受MQTT消息
     console.log("接受MQTT消息");
     this.userM.userSubject.subscribe((user:USerInfo)=>{
-      let navigator = navigator;
-      if(user != null && navigator && navigator.MQTTClientBox){
+      let nav:any = navigator;
+      if(user != null && nav && nav.MQTTClientBox){
         MQTTManager.listenMQTT(user.user_id,user.default_equipment).subscribe((res)=>{
           this.handleMqttMessage(res);
         })
